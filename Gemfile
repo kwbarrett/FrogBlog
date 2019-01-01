@@ -29,14 +29,17 @@ gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
 # Bootstrap 4 ruby gem for Ruby on Rails
-gem 'bootstrap', '~> 4.2.1'
-gem 'jquery-rails'
+source 'https://rails-assets.org' do
+  gem 'rails-assets-bootstrap', '~> 4.0.0.alpha.6'
+  gem 'rails-assets-jquery'
+  gem 'rails-assets-tether'
+end
 gem 'friendly_id', '~> 5.2.4'
 
 group :development, :test do
